@@ -15,7 +15,10 @@ public class ProductService {
 	
 	private  final ProductRepository productRepository;  // inyeccion de dependencia 
 	HashMap<String, Object> datos ;
-	Product product = new Product();
+
+	
+	 @Autowired
+	    private Product product;
 	
 
 	
@@ -23,9 +26,8 @@ public class ProductService {
 	public ProductService(ProductRepository productRepository) {
 		this.productRepository = productRepository;
 		
-		
-		
 	}
+	
 	public List<Product> getProduct() {
 		   
 		   return this.productRepository.findAll();

@@ -9,6 +9,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 import java.time.LocalDate;
+
+import org.springframework.stereotype.Component;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,6 +21,7 @@ import lombok.Setter;
 
 @Entity
 @Table (name = "product")
+@Component
 
 @Data
 public class Product {
